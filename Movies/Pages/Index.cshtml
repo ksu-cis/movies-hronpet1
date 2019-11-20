@@ -34,24 +34,28 @@
 
     <h2>MPAA Rating</h2>
     <label>
-        <input type="checkbox" name="rating" value="G" />
+        <input type="checkbox" name="rating" value="G" checked="@Model.rating.Contains("G")"/>
         Rated G
     </label>
     <label>
-        <input type="checkbox" name="rating" value="PG" />
+        <input type="checkbox" name="rating" value="PG" checked="@Model.rating.Contains("PG")"/>
         Rated PG
     </label>
     <label>
-        <input type="checkbox" name="rating" value="PG-13" />
+        <input type="checkbox" name="rating" value="PG-13" checked="@Model.rating.Contains("PG-13")"/>
         Rated PG-13
     </label>
     <label>
-        <input type="checkbox" name="rating" value="R" />
+        <input type="checkbox" name="rating" value="R" checked="@Model.rating.Contains("R")"/>
         Rated R
     </label>
     <label>
-        <input type="checkbox" name="rating" value="NC-17" />
+        <input type="checkbox" name="rating" value="NC-17" checked="@Model.rating.Contains("NC-17")"/>
         Rated NC-17
     </label>
+
+    <h2>IMDB Ratings</h2>
+    <input type="text" name="minIMDB" id="minIMDB" />
+    <input type="text" name="maxIMDB" id="maxIMDB" />
 
 </form>
